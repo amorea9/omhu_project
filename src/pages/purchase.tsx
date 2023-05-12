@@ -1,7 +1,15 @@
 import React from "react";
+import Head from "next/head";
 
 function purchase() {
-  return <div>purchase</div>;
+  return (
+    <div>
+      {" "}
+      <Head>
+        <title>Omhu | Purchase</title>
+      </Head>
+    </div>
+  );
 }
 
 export default purchase;
