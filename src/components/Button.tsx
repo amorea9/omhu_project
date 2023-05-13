@@ -13,11 +13,11 @@ Disabled?
 */
 
 // STYLING
-const basic = "font-body uppercase border inline-block border-2 py-6 px-3";
+const basic = "font-body uppercase border inline-block border-2 py-6 px-3 leading-6";
 // intent
 const primary = "bg-blue text-white border-blue hover:bg-link hover:border-link active:bg-blue-75 active:border-blue-75";
 const secondary = "bg-none text-blue border-blue hover:bg-blue hover:text-white hover:border-blue active:bg-blue-75 active:text-white active:border-blue-75";
-const alternative = "border-white text-white";
+const alternative = "border-white text-white hover:bg-white hover:text-blue hover:border-white active:bg-blue-50 active:border-blue-50 active:text-white";
 // size
 const large = "text-16";
 const small = "text-14";
