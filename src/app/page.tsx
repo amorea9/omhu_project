@@ -4,8 +4,13 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="p-10 flex gap-5 bg-grey-50">
       <Button intent="primary" kind="link" href="#" size="large" label="Test button" />
+      <Button intent="secondary" kind="link" href="#" size="large" label="Test button" />
+      <Button intent="alternative" kind="link" href="#" size="large" label="Test button" />
+      <Button intent="primary" kind="link" href="#" size="small" label="Test button" />
+      <Button intent="secondary" kind="link" href="#" size="small" label="Test button" />
+      <Button intent="alternative" kind="link" href="#" size="small" label="Test button" />
     </main>
   );
 }
