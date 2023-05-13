@@ -17,12 +17,20 @@ export default function Home() {
         <Button intent="primary" kind="link" href="#" size="large" label="Test button" />
         <Button intent="secondary" kind="link" href="#" size="large" label="Test button" />
         <Button intent="alternative" kind="link" href="#" size="large" label="Test button" />
+
+        <Button intent="primary" kind="link" href="#" size="large" label="Test button" icon="arrow" />
+        <Button intent="secondary" kind="link" href="#" size="large" label="Test button" icon="filter" />
+        <Button intent="alternative" kind="link" href="#" size="large" label="Test button" icon="sort" />
       </div>
 
       <div className="flex gap-5 mt-10">
         <Button intent="primary" kind="link" href="#" size="small" label="Test button" />
         <Button intent="secondary" kind="link" href="#" size="small" label="Test button" />
         <Button intent="alternative" kind="link" href="#" size="small" label="Test button" />
+
+        <Button intent="primary" kind="link" href="#" size="small" label="Test button" icon="arrow" />
+        <Button intent="secondary" kind="link" href="#" size="small" label="Test button" icon="filter" />
+        <Button intent="alternative" kind="link" href="#" size="small" label="Test button" icon="sort" />
       </div>
     </main>
   );
