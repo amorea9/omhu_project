@@ -3,8 +3,8 @@ module.exports = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     fontFamily: {
-      headline: ["Gira Sans", "sans-serif"],
-      body: ["Poppins", "sans-serif"],
+      headline: ["gira-sans", "sans-serif"],
+      body: ["poppins", "sans-serif"],
     },
     colors: {
       blue: {
@@ -32,9 +32,6 @@ module.exports = {
         DEFAULT: "#EE3900",
       },
     },
-    fontFamily: {
-      //add font families here
-    },
     fontSize: {
       12: "0.75rem",
       14: "0.875rem",
@@ -53,6 +50,7 @@ module.exports = {
       medium: 500,
       semibold: 600,
       bold: 700,
+      extrabold: 800,
     },
   },
   plugins: [],
