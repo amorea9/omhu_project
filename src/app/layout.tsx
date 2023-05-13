@@ -1,3 +1,4 @@
+import Head from "next/head";
 import "../../styles/globals.css";
 import { Inter } from "next/font/google";
 
@@ -10,7 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-white text-blue">
+    <html lang="en" className="bg-white text-blue style-body">
+      <Head>
+        <link rel="stylesheet" href="https://use.typekit.net/nyh1izf.css" />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );

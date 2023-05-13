@@ -35,7 +35,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ..
   if (props.kind === "link") {
     const { href, kind, target, ...rest } = props;
     return (
-      <a href={href} target={target} className="bg-blue text-white">
+      <a href={href} target={target} className="bg-blue text-white style-body uppercase">
         {label}
       </a>
     );
