@@ -12,7 +12,7 @@ Anchor link, form button, button with onClick?
 */
 
 // STYLING
-const basic = "font-body uppercase border inline-block border-2 leading-6";
+const basic = "font-body font-medium uppercase border inline-block border-2 leading-6";
 // intent
 const primary = "bg-blue text-white border-blue hover:bg-link hover:border-link active:bg-blue-75 active:border-blue-75";
 const secondary = "bg-none text-blue border-blue hover:bg-blue hover:text-white hover:border-blue active:bg-blue-75 active:text-white active:border-blue-75";
@@ -67,25 +67,6 @@ interface FormButtonProps extends CommonProps {
 
 type ButtonProps = AnchorProps | FormButtonProps;
 
-// onst inner = icon ? (
-//     <span
-//       className={clsx(
-//         'flex flex-row items-center gap-x-5',
-//         iconPosition === 'left' ? 'flex-row-reverse' : 'flex-row',
-//         !children ? 'mt-[-0.2rem] justify-center' : ''
-//       )}
-//     >
-//       {children}
-//       {isSprite(icon) ? (
-//         <Sprite className="h-6 w-6 flex-none" id={icon} />
-//       ) : (
-//         <span className="flex-none">{icon}</span>
-//       )}
-//     </span>
-//   ) : (
-//     children
-//   );
-
 function Button({ intent = "primary", size = "large", icon, label, className, ...props }: ButtonProps) {
   const iconInner = (
     <span className="flex flex-row items-center gap-x-4">
@@ -94,6 +75,7 @@ function Button({ intent = "primary", size = "large", icon, label, className, ..
     </span>
   );
 
+  // this button is for links (page navigation or external links)
   if (props.kind === "link") {
     const { href, kind, target, ...rest } = props;
     return (
@@ -103,15 +85,17 @@ function Button({ intent = "primary", size = "large", icon, label, className, ..
     );
   }
 
+  // this button is for forms
   if (props.kind === "submit") {
     return (
-      <button type="submit" className="">
-        {label}
+      <button type="submit" className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>
+        {icon ? iconInner : label}
       </button>
     );
   }
 
-  return <button className="">{label}</button>;
+  // this button should be able to receive an onClick function
+  return <button className={clsx(basic, intent === "primary" ? primary : intent === "secondary" ? secondary : alternative, size === "large" ? large : small, icon != undefined ? hasIcon : noIcon)}>{icon ? iconInner : label}</button>;
 }
 
 export default Button;

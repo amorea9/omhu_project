@@ -1,4 +1,4 @@
-import Button from "@/components/Button";
+import Button from "@/components/Button/Button";
 import { TestComponent } from "@/components/TestComponent";
 import Image from "next/image";
 
