@@ -12,3 +12,5 @@ export default function Home() {
     </main>
   );
 }
+
+// This should be the home / landing page for the website
