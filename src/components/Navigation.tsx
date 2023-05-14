@@ -7,8 +7,8 @@ import Link from "next/link";
 
 function Navigation(props: { showMenu: boolean; setShowMenu: Function }) {
   return (
-    <div className="relative ">
-      <div className="nav_wrapper flex flex-row items-center justify-between mx-10 my-5 text-blue bg-white">
+    <div>
+      <div className="nav_wrapper flex flex-row items-center justify-between mx-5 sm:mx-10 py-3 sm:py-5 text-blue bg-white">
         <div className="flex flex-row items-center justify-aroun gap-5 ">
           {" "}
           <Image className="logo w-14 h-auto" src={Logo} alt="Omhu logo" />
@@ -51,7 +51,7 @@ function Navigation(props: { showMenu: boolean; setShowMenu: Function }) {
             {" "}
             <Image className="cart w-9" src={Cart} alt="Cart icon"></Image>
           </Link>
-          <Image onClick={() => props.setShowMenu(!props.showMenu)} className="burger_menu cursor-pointer lg:hidden" src={Burger} alt="Burger menu" />
+          <Image onClick={() => props.setShowMenu(true)} className="burger_menu cursor-pointer lg:hidden" src={Burger} alt="Burger menu" />
         </div>
       </div>
     </div>
