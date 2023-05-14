@@ -48,6 +48,10 @@ module.exports = {
       48: "3rem",
       64: "4rem",
     },
+    borderWidth: {
+      DEFAULT: "1px",
+      1.5: "1.5px",
+    },
     fontWeight: {
       normal: 400,
       medium: 500,
